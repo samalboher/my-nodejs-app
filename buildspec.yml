@@ -6,14 +6,14 @@ phases:
       nodejs: latest
     commands:
       - echo "Installing something"
-    pre_build:
-      commands:
-        - echo "We are in the build phase"
-    build:
-      commands:
-        - echo "We are in the build block"
-        - echo "We will run some tests"
-        - grep -Fq "Congratulations" index.html
-    post_build:
-      commands:
-        - echo "We are in the post build phase"
+  pre_build:
+    commands:
+      - echo "We are in the build phase"
+  build:
+    commands:
+      - echo "We are in the build block"
+      - echo "We will run some tests"
+      - grep -Fq "Congratulations" index.html
+  post_build:
+    commands:
+      - echo "We are in the post build phase"
